@@ -11,16 +11,16 @@ const store = new Vuex.Store({
         paymentPrice: null
     },
     mutations: {
-        updateForm (state,form) {
+        updateForm(state, form) {
             state.form = form
         },
         updateStep(state, newValue) {
             state.isPassedFirstStep = newValue
         },
-        updateFlightStatus(state,newState) {
+        updateFlightStatus(state, newState) {
             state.flightStatus = newState
         },
-        updatePaymentPrice(state,newPrice) {
+        updatePaymentPrice(state, newPrice) {
             state.paymentPrice = newPrice
         }
     },
@@ -36,10 +36,10 @@ const store = new Vuex.Store({
         getStep(state) {
             return state.isPassedFirstStep
         },
-        getFlightStatus(state){
+        getFlightStatus(state) {
             return state.flightStatus
         },
-        getPaymentPrice(state){
+        getPaymentPrice(state) {
             return state.paymentPrice
         }
     },

@@ -1,8 +1,6 @@
 <template>
   <div class="relative text-gray-400 focus-within:text-gray-600">
-    <div
-      class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
-    >
+    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
       <svg
         class="w-5 h-5"
         xmlns="http://www.w3.org/2000/svg"
@@ -10,12 +8,7 @@
         viewBox="0 0 24 24"
         stroke="currentColor"
       >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="1.5"
-          :d="icon"
-        />
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" :d="icon" />
       </svg>
     </div>
     <input
@@ -35,16 +28,16 @@ export default {
   props: {
     modelValue: {
       type: String,
-      default: "",
+      default: ""
     },
     placeholder: {
       type: String,
-      default: "",
+      default: ""
     },
     icon: {
       type: String,
-      default: "",
+      default: ""
     }
-  },
+  }
 };
 </script>
