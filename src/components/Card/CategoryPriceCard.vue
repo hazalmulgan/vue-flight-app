@@ -1,5 +1,4 @@
 <template>
-<div>
   <div v-for="(item, index) in info" :key="index">
     <div class="p-4 w-96">
       <div class="header flex justify-between p-4 pb-16">
@@ -19,10 +18,9 @@
         </div>
       </div>
       <div class="content-end">
-        <ButtonCard text="Ucuşu sec" :disabled="toggleValue && item.brandCode !== 'ecoFly'" @click="goToResultPage(item.status,item.price.amount,item.price.currency )"/>
+        <ButtonCard text="Ucusu sec" :disabled="toggleValue && item.brandCode !== 'ecoFly'" @click="goToResultPage(item.status,item.price.amount,item.price.currency )"/>
       </div>
     </div>
-  </div>
   </div>
 </template>
 

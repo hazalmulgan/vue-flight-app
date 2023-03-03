@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col w-11/12 mx-auto">
     <div class="bg-red-500 text-lg p-1 w-36 text-center text-gray-100 mt-4">
-      UCUŞ
+      UCUS
     </div>
     <span class="text-2xl my-4">{{getForm.from}} - {{getForm.toWhere}} {{getForm.passengers}} Yolcu</span>
     <div class="flex flex-col mb-4">
@@ -16,12 +16,12 @@
       </div>
       <div class="space-y-4 mt-4" v-if="toggleValue">
         <p>
-          Promosyon Kodu seçenegi ile tüm Economy kabini Eco Fly paketlerini %50
-          indirimle satın alabilirsiniz!
+          Promosyon Kodu secenegi ile tum Economy kabini Eco Fly paketlerini %50
+          indirimle satin alabilirsiniz!
         </p>
         <p>
-          Promosyon Kodu seceneği aktifken Eco Fly paketi haricinde seçim
-          yapılamamaktadır
+          Promosyon Kodu secenegi aktifken Eco Fly paketi haricinde secim
+          yapilamamaktadir
         </p>
       </div>
     </div>
@@ -29,16 +29,16 @@
       <div
         class="bg-gray-800 text-gray-100 space-x-6 p-2 flex justify-end items-center"
       >
-        <span>Sıralama Kriteri</span>
+        <span>Siralama Kriteri</span>
         <span 
         class="p-2 border-solid border border-white  hover:opacity-90 rounded-md px-4 cursor-pointer" 
         @click="sortingFlightsByPrice"
-          >Ekonomi Kabin Ücreti</span
+          >Ekonomi Kabin Ucreti</span
         >
         <span 
         class="p-2 border-solid border border-white hover:opacity-90 rounded-md px-4 cursor-pointer"
          @click="sortingFlightsByTimes"
-          >Kalkış Saati</span
+          >Kalkis Saati</span
         >
       </div>
       <div class="flights-sorting border border-black">

@@ -1,5 +1,4 @@
 <template>
-<div>
           <div
           class="flex items-center space-x-8 border py-8 px-4 bg-white sort-box"
         >
@@ -13,14 +12,13 @@
             {{title}}
           </div>
           <div class="flex flex-col items-center">
-            <span>Yolcu Başına</span>
+            <span>Yolcu Basina</span>
             <span class="font-bold">{{info.subcategories[0].price.currency}} {{info.subcategories[0].price.amount}}</span>
           </div>
         </div>
         <div class="bg-white order-4 my-2 items-center justify-center flex" v-if="selectedCat === title">
             <CategoryPriceCard :info="info.subcategories" :toggleValue="toggleValue"/>
           </div>
-</div>
 </template>
 
 <script>

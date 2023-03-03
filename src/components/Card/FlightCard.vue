@@ -16,7 +16,7 @@
             </div>
           </div>
           <div class="flex flex-col items-center px-4">
-            <span>Ucuş Süresi</span>
+            <span>Ucus Suresi</span>
             <span class="font-bold">{{info.flightDuration}}</span>
           </div>
         </div>

@@ -1,5 +1,4 @@
 <template>
-<div>
   <form>
     <div class="flex items-center sm:justify-center space-x-4 md:flex-row flex-col sm:space-y-6 md:space-y-0">
       <div class="flex items-baseline min-w-0 px-4 sm:px-0 space-x-4 sm:flex-col md:flex-row sm:space-y-6 md:space-y-0">
@@ -14,7 +13,7 @@
       </div>
       <PopoverMenu @passengerCountChanged="emitPassengerCount"/>
 
-      <ButtonCard text="UCUŞ ARA" 
+      <ButtonCard text="UCUS ARA" 
       @click="navigateToNextPage"
       class="inline-flex items-center justify-center h-14 flex-shrink-0 w-full px-4 py-4 mt-4 font-semibold text-white transition-all duration-200 border border-transparent rounded-md sm:mt-0 sm:w-auto"
       
@@ -22,7 +21,6 @@
     </div>
   </form>
   <FormModal v-if="isModalOpen" @close-modal="closeModal"/>
-</div>
 </template>
 
 <script>

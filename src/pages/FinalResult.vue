@@ -8,9 +8,9 @@
       />
       <font-awesome-icon icon="fa-triangle-exclamation" class="mr-14" v-else />
       <span class="mb-10">
-        Kabin seçiminiz
+        Kabin seciminiz
         {{
-          getFlightStatus === "AVAILABLE" ? "tamamlandı" : "tamamlanamadı"
+          getFlightStatus === "AVAILABLE" ? "tamamlandi" : "tamamlanamadi"
         }}</span
       >
     </div>
@@ -36,6 +36,9 @@ export default {
   },
   components: {
     ButtonCard,DividerLine
+  },
+  created() {
+    console.log(this.getFlightStatus);
   },
   mounted() {
     this.checkFlightStatus();
