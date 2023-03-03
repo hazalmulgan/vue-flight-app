@@ -5,7 +5,9 @@
         <span class="font-bold text-2xl">{{ item.brandCode }}</span>
         <div>
           <span class="text-sm pr-2">{{ item.price.currency }}</span>
-          <span class="font-bold text-2xl">{{ item.price.amount }}</span>
+          <span
+            class="font-bold text-2xl"
+          >{{ toggleValue && item.brandCode === 'ecoFly' ? (item.price.amount / 2) : item.price.amount }}</span>
         </div>
       </div>
       <div class="border border-gray-300 h-52">
@@ -13,12 +15,14 @@
           class="border-b border-gray-300 p-2"
           v-for="(right, index) in item.rights"
           :key="index"
-        >
-          {{ right }}
-        </div>
+        >{{ right }}</div>
       </div>
       <div class="content-end">
-        <ButtonCard text="Ucusu sec" :disabled="toggleValue && item.brandCode !== 'ecoFly'" @click="goToResultPage(item.status,item.price.amount,item.price.currency )"/>
+        <ButtonCard
+          text="Ucusu sec"
+          :disabled="toggleValue && item.brandCode !== 'ecoFly'"
+          @click="goToResultPage(item.status,item.price.amount,item.price.currency )"
+        />
       </div>
     </div>
   </div>
@@ -31,29 +35,37 @@ export default {
   components: { ButtonCard },
   data() {
     return {
-      categoryCardInfo: [],
+      categoryCardInfo: []
     };
   },
   props: {
     info: {
       type: Object,
-      default: () => {},
+      default: () => {}
     },
     toggleValue: {
       type: Boolean,
-      default: false,
-    },
+      default: false
+    }
   },
-  methods:{
-    goToResultPage (status,amount,currency) {
-        this.$store.commit('updateFlightStatus',status)
-        this.$router.push({ name: "FinalResult"});
-        const fullPrice = currency+' '+amount
-        if(status === 'AVAILABLE') {
-            this.$store.commit('updatePaymentPrice',fullPrice)
-        }
+  computed: {
+    discount() {
+      return this.toggleValue;
+    }
+  },
+  methods: {
+    goToResultPage(status, amount, currency) {
+      if (this.toggleValue) {
+        amount = amount / 2;
+      }
+      this.$store.commit("updateFlightStatus", status);
+      this.$router.push({ name: "FinalResult" });
+      let fullPrice = currency + " " + amount;
+      if (status === "AVAILABLE") {
+        this.$store.commit("updatePaymentPrice", fullPrice);
       }
     }
+  }
 };
 </script>
 
